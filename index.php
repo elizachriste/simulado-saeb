@@ -11,11 +11,11 @@ include 'db.php';
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!--Criação da estrutura da tabela - feita em 01/10 10:25-->
+<!-- realizada em 01/10 10:25-->
     <div class="container">
         <h1>Cadastro de Alunos</h1>
         
-        <!-- Formulário de cadastro de alunos -->
+        <!-- cadastro de alunos -->
         <form action="cadastro.php" method="POST" class="form-cadastro">
             <label for="nome">Nome:</label>
             <input type="text" name="nome" id="nome" required>
@@ -32,7 +32,7 @@ include 'db.php';
             <button type="submit">Cadastrar</button>
         </form>
 
-        <!-- Formulário de pesquisa -->
+        
         <form method="GET" action="" class="form-pesquisa">
             <?php
             // Verifica se foi feita uma pesquisa e armazena o termo
@@ -42,8 +42,8 @@ include 'db.php';
             <button type="submit">Pesquisar</button>
         </form>
 
-        <!-- Tabela de Alunos -->
-        <h2>Alunos Cadastrados</h2>
+        
+        <h2>Alunos</h2>
         <table class="table-alunos">
             <thead>
                 <tr>
@@ -57,19 +57,17 @@ include 'db.php';
             </thead>
             <tbody>
                 <?php
-                // Consulta padrão ou com base na pesquisa
+                // Consulta pesquisa
                 if ($pesquisa) {
-                    // Prepara a consulta de pesquisa com parâmetros de nome ou curso
                     $sql = "SELECT * FROM alunos WHERE nome LIKE '%$pesquisa%' OR curso LIKE '%$pesquisa%'";
                 } else {
-                    // Consulta padrão para listar todos os alunos
                     $sql = "SELECT * FROM alunos";
                 }
 
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                    // Exibe os alunos cadastrados
+                    // exibir os alunos cadastrados
                     while ($row = $result->fetch_assoc()) {
                         echo "<tr>
                                 <td>{$row['id']}</td>
@@ -82,7 +80,7 @@ include 'db.php';
                               </tr>";
                     }
                 } else {
-                    echo "<tr><td colspan='6'>Nenhum aluno encontrado</td></tr>";
+                    echo "<tr><td colspan='6'>Aluno não encontrado</td></tr>";
                 }
                 ?>
             </tbody>
