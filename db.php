@@ -1,9 +1,10 @@
 <?php
-// Etapa 1 - realizada em 01/10 as 09:17
-include 'db.php'; // Inclui o arquivo de conexão com o banco de dados
+$host = 'localhost'; // Define o host do banco de dados
+$db = 'escolaa'; // Nome do banco de dados
+$user = 'eliza'; // Nome de usuário para conexão
+$pass = '123456'; // Senha do usuário
+$port = '3307'; // Porta de conexão ao banco de dados
 
-// Testa a conexão 
-if ($conn->connect_error) {
-    die("Conexão falhou: " . $conn->connect_error); // Mensagem de erro
-}
+$conn = new mysqli($host, $user, $pass, $db, $port); // Estabelece a conexão usando os parâmetros definidos
+//1º etapa- 01/10 09:17
 ?>
