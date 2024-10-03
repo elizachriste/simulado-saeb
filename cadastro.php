@@ -11,9 +11,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $sql = "INSERT INTO alunos (nome, idade, email, curso) VALUES ('$nome', $idade, '$email', '$curso')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Aluno cadastrado com sucesso!'); window.location.href='index.php';</script>";
+        echo "<script>alert('Aluno cadastrado!'); window.location.href='index.php';</script>";
     } else {
-        echo "Ocorreu um erro: " . $sql . "<br>" . $conn->error;
+        echo "Erro: " . $sql . "<br>" . $conn->error;
     }
 
     $conn->close();
