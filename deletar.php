@@ -9,9 +9,9 @@ if (isset($_GET['id'])) { // Verifica se o ID do aluno a ser excluído foi passa
     $sql = "DELETE FROM alunos WHERE id=$id";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<script>alert('Aluno excluído com sucesso!'); window.location.href='index.php';</script>"; // Mensagem de sucesso
+        echo "<script>alert('Dado retirado!'); window.location.href='index.php';</script>"; // Mensagem de sucesso
     } else {
-        echo "Erro ao excluir o aluno: " . $conn->error; // Mensagem de erro
+        echo "Erro ao deletar o dado: " . $conn->error; // Mensagem de erro
     }
 
     $conn->close(); // Fecha a conexão
