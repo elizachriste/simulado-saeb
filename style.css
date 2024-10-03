@@ -78,10 +78,6 @@ table {
     border-collapse: collapse; /* Remove espaçamentos */
 }
 
-/* Bordas da tabela */
-table, th, td {
-    border: 1px solid #ccc; /* Borda cinza */
-}
 
 /* Estilo das células */
 th, td {
