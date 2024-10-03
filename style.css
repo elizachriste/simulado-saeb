@@ -10,8 +10,6 @@ body {
     margin: 50px auto; /* Centraliza o container */
     background: #fff; /* Fundo branco */
     padding: 40px; /* Espaçamento interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 /* Títulos */
@@ -24,7 +22,6 @@ h1, h2 {
 .form-pesquisa input {
     font-size: 1rem; /* Tamanho da fonte */
     padding: 10px; /* Espaçamento interno */
-    border-radius: 8px; /* Bordas arredondadas */
 }
 
 /* Estilo do botão de pesquisa */
@@ -49,14 +46,7 @@ h1, h2 {
     color: #d90429; /* Cor ao passar o mouse */
 }
 
-/* Estilos responsivos */
-@media (max-width: 768px) {
-    .container {
-        padding: 20px; /* Menos espaçamento em telas pequenas */
-    }
-}
-
-/* Estilo para formulários */
+/* Estilo para formulário */
 form {
     margin-bottom: 20px; /* Margem inferior */
 }
@@ -69,7 +59,7 @@ input[type="submit"] {
     display: block; /* Exibe como bloco */
     margin: 10px 0; /* Margem vertical */
     padding: 10px; /* Espaçamento interno */
-    width: 300px; /* Largura fixa */
+    width: 200px; /* Largura fixa */
 }
 
 /* Estilo da tabela */
@@ -85,9 +75,9 @@ th, td {
     text-align: left; /* Alinhamento à esquerda */
 }
 
-/* Linhas alternadas da tabela */
+/* Linhas da tabela */
 tr:nth-child(even) {
-    background-color: #f9f9f9; /* Cor para linhas pares */
+    background-color: #f9f9f9; /* Cor para linhas */
 }
 
 /* Estilo de links em geral */
